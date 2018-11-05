@@ -4,6 +4,8 @@
 @import '~quill/dist/quill.bubble.css';
 @import '~quill/dist/quill.snow.css';
 @import '../node_modules/reset-css/sass/_reset.scss';
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/ngx-toastr/toastr.css";
 @import './partials/_variables.scss';
 @import './partials/_globals.scss';
 @import './partials/_icons.scss';

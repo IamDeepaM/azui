@@ -1,6 +1,10 @@
 <div class="view-container">
-    <div class="sub-title-wrap flx-row flx-jsb">
-        <div class="sub-title">Rule Setup</div>
-    </div>
-    <app-add-content></app-add-content>
+  <div class="sub-title-wrap flx-row flx-jsb">
+    <div class="sub-title">Rule Setup</div>
+  </div>
+  <app-add-content *ngIf="isContent" [rule]="rule"></app-add-content>
+  <div class="btn-wrap flx-row flx-jce">
+    <button type="button" class="btn btn-primary btn-sm" *ngIf="rule.content && isContent" (click)="onSetInfo()">Set Info</button>
+    <button type="button" class="btn btn-primary btn-sm" *ngIf="!isContent" (click)="onSetContent()">Back to content</button>
+  </div>
 </div>

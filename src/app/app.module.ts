@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,8 @@ import { AddContentComponent } from './add-content/add-content.component';
 import { AddRuleComponent } from './add-rule/add-rule.component';
 
 import { QuillModule } from 'ngx-quill';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { QuillModule } from 'ngx-quill';
     AddRuleComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    QuillModule
+    QuillModule,
+    Ng2SmartTableModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

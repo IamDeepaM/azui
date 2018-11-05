@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { RuleModel } from '../add-rule/rule.model';
 
 @Component({
   selector: 'app-add-content',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddContentComponent implements OnInit {
 
-  content: any;
+  @Input() rule: RuleModel;
 
   constructor() { }
 
