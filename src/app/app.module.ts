@@ -15,13 +15,16 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { SanitizeHtmlPipe } from './pipe/sanitize.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     AddContentComponent,
     AddRuleComponent,
     ContentInfoComponent,
-    SetInfoComponent
+    SetInfoComponent,
+    SanitizeHtmlPipe
   ],
   imports: [
     BrowserAnimationsModule,
@@ -34,7 +37,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ToastrModule.forRoot(),
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    SanitizeHtmlPipe
+  ],
   entryComponents: [
     SetInfoComponent
   ],

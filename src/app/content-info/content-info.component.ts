@@ -14,6 +14,8 @@ export class ContentInfoComponent implements OnInit {
   @Input() rule: RuleModel;
   query: string;
   content: any;
+  imgUrl: String;
+  description: String;
 
   constructor(private toastr: ToastrService,
     private modalService: NgbModal) {}
@@ -40,13 +42,29 @@ export class ContentInfoComponent implements OnInit {
       const modalRef = this.modalService.open(SetInfoComponent, { size: 'lg' });
       modalRef.result.then((result) => {
         if (result) {
-          // vm.rule.content = vm.content.replace(new RegExp(vm.query, 'gi'), match => {
-          //   return '<span class="highlight-text">' + match + '</span>';
-          // });
+          vm.rule.content = vm.content.replace(new RegExp(vm.query, 'gi'), match => {
+            const matchReplace = '<span class="highlight-content" link="' + result.image + '" desc="' + result.desc
+            + '" (mouseenter)="onDataOver($event)" (mouseleave)="onClear()">' + match + '</span>';
+            return matchReplace;
+          });
+          vm.content = vm.rule.content;
         } else {
           vm.toastr.error('No config has been done');
         }
       });
     }
+  }
+
+  onDataOver(event) {
+    const vm = this;
+    console.log(event);
+    vm.imgUrl = event.target.attributes.link.value;
+    vm.description = event.target.attributes.desc.value;
+  }
+
+  onClear() {
+    const vm = this;
+    vm.description = '';
+    vm.imgUrl = null;
   }
 }
