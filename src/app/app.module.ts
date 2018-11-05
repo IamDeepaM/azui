@@ -7,18 +7,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddContentComponent } from './add-content/add-content.component';
 import { AddRuleComponent } from './add-rule/add-rule.component';
+import { ContentInfoComponent } from './content-info/content-info.component';
+import { SetInfoComponent } from './set-info/set-info.component';
 
 import { QuillModule } from 'ngx-quill';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { ToastrModule } from 'ngx-toastr';
-import { ContentInfoComponent } from './content-info/content-info.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddContentComponent,
     AddRuleComponent,
-    ContentInfoComponent
+    ContentInfoComponent,
+    SetInfoComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -28,9 +31,13 @@ import { ContentInfoComponent } from './content-info/content-info.component';
     ReactiveFormsModule,
     QuillModule,
     Ng2SmartTableModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgbModule.forRoot()
   ],
   providers: [],
+  entryComponents: [
+    SetInfoComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

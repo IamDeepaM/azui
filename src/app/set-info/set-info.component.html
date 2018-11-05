@@ -1,0 +1,13 @@
+<div class="form-group">
+  <label for="setImage">Image Url</label>
+  <input type="text" [(ngModel)]="imgUrl" class="form-control" id="setImage" aria-describedby="imgHelp" placeholder="Image Url">
+  <small id="imgHelp" class="form-text text-muted">Provide the image url which needs to be linked.</small>
+</div>
+<div class="form-group">
+  <label for="setDesc">Description</label>
+  <textarea [(ngModel)]="description" class="form-control" id="setDesc">
+</div>
+<div class="flx-row">
+  <button class="btn btn-secondary" (click)="onClose()">Close</button>
+  <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+</div>
