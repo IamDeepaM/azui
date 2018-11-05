@@ -1,23 +1,27 @@
 <div class="app-container">
-    <div class="header-wrap flx-row flx-jsb">
-        <div class="flx-row">
-            <button (click)="isExpand = !isExpand" [ngClass]="{'active': isExpand}">
+  <div class="header-wrap flx-row flx-jsb">
+    <div class="flx-row">
+      <button (click)="isExpand = !isExpand" [ngClass]="{'active': isExpand}">
 				<span></span>
 				<span></span>
 				<span></span>
 			</button>
-            <div class="app-title f20 pointer" (click)="goHome()">AMZ</div>
-        </div>
+      <div class="app-title f20 pointer" (click)="goHome()">AMZ</div>
     </div>
-    <div class="view-wrap" [ngClass]="{'nav-expand': isExpand}">
-        <div class="left-navigation flx-column" [ngClass]="{'nav-expand': isExpand}">
-            <div class="nav-list flx-row pointer" [ngClass]="{'active': routeName === 'new-vendor'}" (click)="navigateTo('/new-vendor')">
-                <div class="icon-nav icon-doc"></div>
-                <div class="nav-title">AMZ</div>
-            </div>
-        </div>
-        <div class="right-container">
-            <router-outlet></router-outlet>
-        </div>
+  </div>
+  <div class="view-wrap" [ngClass]="{'nav-expand': isExpand}">
+    <div class="left-navigation flx-column" [ngClass]="{'nav-expand': isExpand}">
+      <div class="nav-list flx-row pointer" [ngClass]="{'active': routeName === 'rule-setup'}" (click)="navigateTo('/rule-setup')">
+        <div class="icon-nav icon-doc"></div>
+        <div class="nav-title">New Rule</div>
+      </div>
+      <div class="nav-list flx-row pointer" [ngClass]="{'active': routeName === 'rules-list'}" (click)="navigateTo('/rules-list')">
+        <div class="icon-nav icon-list"></div>
+        <div class="nav-title">Rules</div>
+      </div>
     </div>
+    <div class="right-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>

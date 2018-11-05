@@ -57,7 +57,6 @@ export class ContentInfoComponent implements OnInit {
 
   onDataOver(event) {
     const vm = this;
-    console.log(event);
     vm.imgUrl = event.target.attributes.link.value;
     vm.description = event.target.attributes.desc.value;
   }

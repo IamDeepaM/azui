@@ -9,6 +9,7 @@ import { AddContentComponent } from './add-content/add-content.component';
 import { AddRuleComponent } from './add-rule/add-rule.component';
 import { ContentInfoComponent } from './content-info/content-info.component';
 import { SetInfoComponent } from './set-info/set-info.component';
+import { RulesListComponent } from './rules-list/rules-list.component';
 
 import { QuillModule } from 'ngx-quill';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
@@ -24,7 +25,8 @@ import { SanitizeHtmlPipe } from './pipe/sanitize.pipe';
     AddRuleComponent,
     ContentInfoComponent,
     SetInfoComponent,
-    SanitizeHtmlPipe
+    SanitizeHtmlPipe,
+    RulesListComponent
   ],
   imports: [
     BrowserAnimationsModule,

@@ -94,8 +94,8 @@
   }
   &.nav-expand {
     &:before {
-      min-width: 200px;
-      width: 200px;
+      min-width: 150px;
+      width: 150px;
     }
   }
   &.not-login {
@@ -133,8 +133,8 @@
     }
   }
   &.nav-expand {
-    min-width: 200px;
-    width: 200px;
+    min-width: 150px;
+    width: 150px;
     @media screen and (max-width: $break-tab) {
       display: block;
       position: absolute;

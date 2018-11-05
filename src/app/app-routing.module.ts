@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AddContentComponent } from './add-content/add-content.component';
 import { AddRuleComponent } from './add-rule/add-rule.component';
+import { RulesListComponent } from './rules-list/rules-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/rule-setup', pathMatch: 'full' },
   {
-    path: 'add-content',
-    component: AddContentComponent
-  }, {
     path: 'rule-setup',
-    component: AddRuleComponent
+    component: AddRuleComponent,
+    data: {
+      name: 'rule-setup'
+    }
+  }, {
+    path: 'rules-list',
+    component: RulesListComponent,
+    data: {
+      name: 'rules-list'
+    }
   }
 ];
 
