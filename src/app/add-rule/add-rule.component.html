@@ -2,9 +2,24 @@
   <div class="sub-title-wrap flx-row flx-jsb">
     <div class="sub-title">Rule Setup</div>
   </div>
+  <div class="flx-row no-gutters">
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control" [(ngModel)]="rule.title" placeholder="Rule title">
+    </div>
+    <div class="form-group col-md-3">
+      <input type="text" class="form-control" [(ngModel)]="rule.no" placeholder="Rule No">
+    </div>
+    <div class="form-group col-md-3">
+      <input type="text" class="form-control" [(ngModel)]="rule.group" placeholder="Group">
+    </div>
+  </div>
   <app-add-content *ngIf="isContent" [rule]="rule"></app-add-content>
-  <div class="btn-wrap flx-row flx-jce">
-    <button type="button" class="btn btn-primary btn-sm" *ngIf="rule.content && isContent" (click)="onSetInfo()">Set Info</button>
-    <button type="button" class="btn btn-primary btn-sm" *ngIf="!isContent" (click)="onSetContent()">Back to content</button>
+  <app-content-info *ngIf="!isContent" [rule]="rule"></app-content-info>
+  <div class="btn-wrap flx-row flx-jce" *ngIf="rule.content && isContent">
+    <button type="button" class="btn btn-primary btn-sm" (click)="onSetInfo()">Set Info</button>
+  </div>
+  <div class="btn-wrap flx-row flx-jsb" *ngIf="!isContent">
+    <button type="button" class="btn btn-primary btn-sm" (click)="onSetContent()">Back to content</button>
+    <button type="button" class="btn btn-primary btn-sm" (click)="onSave()">Save</button>
   </div>
 </div>

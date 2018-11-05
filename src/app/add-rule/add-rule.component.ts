@@ -33,4 +33,8 @@ export class AddRuleComponent implements OnInit {
     const vm = this;
     vm.isContent = true;
   }
+
+  onSave() {
+    const vm = this;
+  }
 }

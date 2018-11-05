@@ -11,12 +11,14 @@ import { AddRuleComponent } from './add-rule/add-rule.component';
 import { QuillModule } from 'ngx-quill';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { ToastrModule } from 'ngx-toastr';
+import { ContentInfoComponent } from './content-info/content-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddContentComponent,
-    AddRuleComponent
+    AddRuleComponent,
+    ContentInfoComponent
   ],
   imports: [
     BrowserAnimationsModule,

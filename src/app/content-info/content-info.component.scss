@@ -1,0 +1,12 @@
+.content-holder {
+  height: calc(50vh + 16px);
+  overflow: auto;
+  border-right: 1px solid #ced4da;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.rule-content {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
