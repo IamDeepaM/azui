@@ -43,6 +43,8 @@ export class ContentInfoComponent implements OnInit {
           // vm.rule.content = vm.content.replace(new RegExp(vm.query, 'gi'), match => {
           //   return '<span class="highlight-text">' + match + '</span>';
           // });
+        } else {
+          vm.toastr.error('No config has been done');
         }
       });
     }

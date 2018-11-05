@@ -26,7 +26,7 @@ export class SetInfoComponent implements OnInit {
     vm.description = '';
   }
 
-  onClose() {
+  onExit() {
     const vm = this;
     vm.activeModal.close(null);
   }
