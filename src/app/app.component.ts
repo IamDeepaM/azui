@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'azui';
+  isExpand = true;
+
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute) {}
+
+  goHome() {
+    const vm = this;
+    vm.router.navigate(['/']);
+  }
 }

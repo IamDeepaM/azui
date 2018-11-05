@@ -1,0 +1,167 @@
+.flx-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flx-row-na {
+    display: flex;
+    flex-direction: row;
+}
+
+.flx-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flx-ac {
+    align-items: center;
+}
+
+.flx-jce {
+    justify-content: flex-end;
+}
+
+.flx-jc {
+    justify-content: center;
+}
+
+.flx-jsb {
+    justify-content: space-between;
+}
+
+.flx-jsa {
+    justify-content: space-around;
+}
+
+.flx-wrap {
+    flex-wrap: wrap;
+}
+
+.f20 {
+    font-size: 20px;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.f12 {
+    font-size: 12px;
+}
+
+.primary-color {
+    color: $primary-color;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.disable {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.form-disable {
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+// .spinner {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: 9999;
+//     background: url('assets/icons/spinner.gif') no-repeat top center / 100px;
+//     background-color: rgba(0,0,0,0.4);
+// }
+.truncate {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hyper-link {
+    padding-top: 10px;
+    text-decoration: underline;
+    color: $primary-color;
+}
+
+.check-inactive,
+.check-active {
+    height: 16px;
+    width: 16px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    position: relative;
+}
+
+.check-active {
+    &:after {
+        content: '\2713';
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #000;
+        font-size: 18px;
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.tab-red {
+    color: #B71C1C;
+}
+
+.tab-blue {
+    color: #007bff;
+}
+
+option {
+    &.yellow {
+        color: #FDD835;
+    }
+    &.red {
+        color: #B71C1C;
+    }
+    &.green {
+        color: #43A047;
+    }
+    &.blue {
+        color: #32668F;
+    }
+}
+
+.btn-wrap {
+    .yellow {
+        background-color: #FDD835 !important;
+    }
+    .red {
+        background-color: #B71C1C !important;
+    }
+    .green {
+        background-color: #43A047 !important;
+    }
+}
