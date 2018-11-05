@@ -3,8 +3,8 @@
     <div class="sub-title">Set content info</div>
   </div>
   <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Search">
-    <div class="input-group-append pointer">
+    <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" (change)="onSearch()">
+    <div class="input-group-append pointer" (click)="onSetInfo()">
       <span class="input-group-text">+</span>
     </div>
   </div>
