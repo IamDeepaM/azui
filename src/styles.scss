@@ -10,3 +10,22 @@
 @import './partials/_globals.scss';
 @import './partials/_icons.scss';
 @import './partials/_layout.scss';
+p {
+  padding: 0 0 10px 0;
+  line-height: 1.2;
+}
+
+ul,
+ol {
+  li {
+    padding: 0 0 5px 15px;
+    line-height: 1.2;
+    position: relative;
+    &:before {
+      content: "*";
+      position: absolute;
+      left: 2px;
+      top: 2px;
+    }
+  }
+}

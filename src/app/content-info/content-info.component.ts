@@ -14,8 +14,6 @@ export class ContentInfoComponent implements OnInit {
   @Input() rule: RuleModel;
   query: string;
   content: any;
-  imgUrl: String;
-  description: String;
 
   constructor(private toastr: ToastrService,
     private modalService: NgbModal) {}
@@ -48,22 +46,11 @@ export class ContentInfoComponent implements OnInit {
             return matchReplace;
           });
           vm.content = vm.rule.content;
+          vm.query = '';
         } else {
           vm.toastr.error('No config has been done');
         }
       });
     }
-  }
-
-  onDataOver(event) {
-    const vm = this;
-    vm.imgUrl = event.target.attributes.link.value;
-    vm.description = event.target.attributes.desc.value;
-  }
-
-  onClear() {
-    const vm = this;
-    vm.description = '';
-    vm.imgUrl = null;
   }
 }
