@@ -42,3 +42,35 @@
 .highlight-content {
   border-bottom: 1px solid $hover-color;
 }
+
+
+/* View rule layout */
+
+.vrc {
+  .ch {
+    padding: 5px;
+  }
+  .ch-l {
+    min-height: 90vh;
+    max-height: 90vh;
+    overflow: auto;
+    border-right: 1px solid #ced4da;
+  }
+  .ch-r {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    .over-image {
+      width: 360px;
+      height: auto;
+    }
+    .over-data {
+      margin-top: 10px;
+    }
+    .desc-view {
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+      padding: 5px;
+    }
+  }
+}
