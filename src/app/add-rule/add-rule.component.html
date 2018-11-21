@@ -20,6 +20,9 @@
   </div>
   <div class="btn-wrap flx-row flx-jsb" *ngIf="!isContent">
     <button type="button" class="btn btn-primary btn-sm" (click)="onSetContent()">Back to content</button>
-    <button type="button" class="btn btn-primary btn-sm" (click)="onSave()">Save</button>
+    <div class="flx-row onleft-btn">
+      <button type="button" class="btn btn-primary btn-sm" (click)="onSave()">Save</button>
+      <button type="button" class="btn btn-primary btn-sm" (click)="onView()">View</button>
+    </div>
   </div>
 </div>

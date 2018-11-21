@@ -9,12 +9,6 @@
     </div>
   </div>
   <div class="flx-row no-gutters rule-content">
-    <div class="content-holder col-md-6" [innerHTML]="rule.content | sanitizeHtml"></div>
-    <div class="content-holder col-md-6">
-      <img src="{{imgUrl}}" class="over-image" *ngIf="imgUrl">
-      <div class="over-data" *ngIf="description">
-        <span>{{description}}</span>
-      </div>
-    </div>
+    <div class="content-holder col-md-12" [innerHTML]="rule.content | sanitizeHtml"></div>
   </div>
 </div>
