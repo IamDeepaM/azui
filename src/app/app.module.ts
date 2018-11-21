@@ -17,6 +17,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { SanitizeHtmlPipe } from './pipe/sanitize.pipe';
+import { ViewRuleComponent } from './view-rule/view-rule.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SanitizeHtmlPipe } from './pipe/sanitize.pipe';
     ContentInfoComponent,
     SetInfoComponent,
     SanitizeHtmlPipe,
-    RulesListComponent
+    RulesListComponent,
+    ViewRuleComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -43,7 +45,8 @@ import { SanitizeHtmlPipe } from './pipe/sanitize.pipe';
     SanitizeHtmlPipe
   ],
   entryComponents: [
-    SetInfoComponent
+    SetInfoComponent,
+    ViewRuleComponent
   ],
   bootstrap: [AppComponent]
 })

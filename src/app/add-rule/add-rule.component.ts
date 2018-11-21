@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RuleModel } from './rule.model';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ViewRuleComponent } from '../view-rule/view-rule.component';
 
 @Component({
   selector: 'app-add-rule',
@@ -11,7 +13,7 @@ export class AddRuleComponent implements OnInit {
   rule: RuleModel;
   isContent: boolean;
 
-  constructor() { }
+  constructor(private ngms: NgbModal) { }
 
   ngOnInit() {
     const vm = this;
@@ -36,5 +38,11 @@ export class AddRuleComponent implements OnInit {
 
   onSave() {
     const vm = this;
+  }
+
+  onView() {
+    const vm = this;
+    const modalRef = this.ngms.open(ViewRuleComponent, { size: 'lg' });
+    modalRef.componentInstance.rule = vm.rule;
   }
 }
