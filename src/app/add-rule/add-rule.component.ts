@@ -42,7 +42,7 @@ export class AddRuleComponent implements OnInit {
 
   onView() {
     const vm = this;
-    const modalRef = this.ngms.open(ViewRuleComponent, { size: 'lg' });
+    const modalRef = this.ngms.open(ViewRuleComponent, { size: 'lg', windowClass: 'app-modal-window' });
     modalRef.componentInstance.rule = vm.rule;
   }
 }
