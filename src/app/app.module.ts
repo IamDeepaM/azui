@@ -9,7 +9,7 @@ import { AddContentComponent } from './add-content/add-content.component';
 import { AddRuleComponent } from './add-rule/add-rule.component';
 import { ContentInfoComponent } from './content-info/content-info.component';
 import { SetInfoComponent } from './set-info/set-info.component';
-import { RulesListComponent } from './rules-list/rules-list.component';
+import { RulesListComponent, ButtonViewComponent } from './rules-list/rules-list.component';
 
 import { QuillModule } from 'ngx-quill';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
@@ -30,7 +30,8 @@ import { DataService } from './data.service';
     SetInfoComponent,
     SanitizeHtmlPipe,
     RulesListComponent,
-    ViewRuleComponent
+    ViewRuleComponent,
+    ButtonViewComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -49,7 +50,8 @@ import { DataService } from './data.service';
   ],
   entryComponents: [
     SetInfoComponent,
-    ViewRuleComponent
+    ViewRuleComponent,
+    ButtonViewComponent
   ],
   bootstrap: [AppComponent]
 })
