@@ -19,6 +19,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SanitizeHtmlPipe } from './pipe/sanitize.pipe';
 import { ViewRuleComponent } from './view-rule/view-rule.component';
 
+import { DataService } from './data.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,8 @@ import { ViewRuleComponent } from './view-rule/view-rule.component';
     NgbModule.forRoot()
   ],
   providers: [
-    SanitizeHtmlPipe
+    SanitizeHtmlPipe,
+    DataService
   ],
   entryComponents: [
     SetInfoComponent,

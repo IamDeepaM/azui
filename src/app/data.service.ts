@@ -11,7 +11,7 @@ import { AppSettings } from './app.settings';
 export class DataService {
   constructor(private http: Http) {}
 
-  getDataNoToken(path: string): Observable < any > {
+  getData(path: string): Observable < any > {
     const vm = this;
     return this.http.get(AppSettings.api_endpoint + path)
       .map((res: Response) => {
@@ -22,7 +22,7 @@ export class DataService {
       });
   }
 
-  postDataNoToken(path: string, data: any): Observable < any > {
+  postData(path: string, data: any): Observable < any > {
     const vm = this;
     return this.http.post(AppSettings.api_endpoint + path, data)
       .map((res: Response) => {
