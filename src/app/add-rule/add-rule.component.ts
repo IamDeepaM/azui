@@ -3,6 +3,7 @@ import { RuleModel } from './rule.model';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ViewRuleComponent } from '../view-rule/view-rule.component';
 import { DataService } from '../data.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-add-rule',
@@ -15,7 +16,8 @@ export class AddRuleComponent implements OnInit {
   isContent: boolean;
 
   constructor(private ngms: NgbModal,
-    private ds: DataService) { }
+    private ds: DataService,
+    private toastr: ToastrService) { }
 
   ngOnInit() {
     const vm = this;
@@ -40,11 +42,16 @@ export class AddRuleComponent implements OnInit {
 
   onSave() {
     const vm = this;
-    vm.ds.postData('/rules/add', vm.rule).subscribe(res => {
-      if (res && !res.error) {
-        console.log(res);
-      }
-    });
+    if (vm.rule.content && vm.rule.group && vm.rule.no && vm.rule.title) {
+      vm.ds.postData('/rules/add', vm.rule).subscribe(res => {
+        if (res && !res.error) {
+          vm.toastr.success('rule added succesfully');
+          vm.clearFields();
+        }
+      });
+    } else {
+      vm.toastr.error('please fill all the fields');
+    }
   }
 
   onView() {
