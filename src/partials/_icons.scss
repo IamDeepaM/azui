@@ -4,10 +4,28 @@
   cursor: pointer;
 }
 
+.icon-sm {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
 .icon-doc {
   background: url('assets/icons/doc.svg') no-repeat center center / 30px;
 }
 
 .icon-list {
   background: url('assets/icons/list.svg') no-repeat center center / 30px;
+}
+
+.icon-tick {
+  background: url('assets/icons/tick.svg') no-repeat center center / 20px;
+}
+
+.icon-cross {
+  background: url('assets/icons/close.svg') no-repeat center center / 20px;
+}
+
+.icon-eye {
+  background: url('assets/icons/eye.svg') no-repeat center center / 20px;
 }

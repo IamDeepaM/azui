@@ -42,7 +42,7 @@ export class AddRuleComponent implements OnInit {
 
   onSave() {
     const vm = this;
-    if (vm.rule.content && vm.rule.group && vm.rule.no && vm.rule.title) {
+    if (vm.rule.content && vm.rule.group && vm.rule.ruleno && vm.rule.title) {
       vm.ds.postData('/rules/add', vm.rule).subscribe(res => {
         if (res && !res.error) {
           vm.toastr.success('rule added succesfully');

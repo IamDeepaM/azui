@@ -1,6 +1,6 @@
 export class RuleModel {
     content: any = null;
     title: String;
-    no: String;
+    ruleno: String;
     group: String;
 }

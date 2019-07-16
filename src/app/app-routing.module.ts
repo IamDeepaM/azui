@@ -7,7 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthService as AuthGuard } from './auth.service';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/rule-setup', pathMatch: 'full' },
+  { path: '', redirectTo: '/rules-list', pathMatch: 'full' },
   {
     path: 'login',
     component: LoginComponent,
