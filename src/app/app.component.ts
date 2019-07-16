@@ -9,17 +9,20 @@ import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 export class AppComponent {
   isExpand = true;
   routeName: string;
+  isLogin: boolean;
 
   constructor(private router: Router,
     private route: ActivatedRoute) {
       const vm = this;
       vm.router.events.forEach((event) => {
         if (event instanceof NavigationEnd) {
+          vm.isLogin = false;
           let currentRoute = this.route.root;
           if (currentRoute.children[0] !== undefined) {
             currentRoute = currentRoute.children[0];
           }
           if (currentRoute.snapshot.data) {
+            vm.isLogin = currentRoute.snapshot.data.name === 'login';
             vm.routeName = currentRoute.snapshot.data.name;
           }
         }

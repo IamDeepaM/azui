@@ -20,6 +20,7 @@ import { SanitizeHtmlPipe } from './pipe/sanitize.pipe';
 import { ViewRuleComponent } from './view-rule/view-rule.component';
 
 import { DataService } from './data.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DataService } from './data.service';
     SanitizeHtmlPipe,
     RulesListComponent,
     ViewRuleComponent,
-    ButtonViewComponent
+    ButtonViewComponent,
+    LoginComponent
   ],
   imports: [
     BrowserAnimationsModule,
