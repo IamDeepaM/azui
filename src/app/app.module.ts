@@ -10,6 +10,7 @@ import { AddRuleComponent } from './add-rule/add-rule.component';
 import { ContentInfoComponent } from './content-info/content-info.component';
 import { SetInfoComponent } from './set-info/set-info.component';
 import { RulesListComponent, ButtonViewComponent } from './rules-list/rules-list.component';
+import { LoginComponent } from './login/login.component';
 
 import { QuillModule } from 'ngx-quill';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
@@ -20,7 +21,7 @@ import { SanitizeHtmlPipe } from './pipe/sanitize.pipe';
 import { ViewRuleComponent } from './view-rule/view-rule.component';
 
 import { DataService } from './data.service';
-import { LoginComponent } from './login/login.component';
+import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { LoginComponent } from './login/login.component';
   ],
   providers: [
     SanitizeHtmlPipe,
-    DataService
+    DataService,
+    AppService
   ],
   entryComponents: [
     SetInfoComponent,

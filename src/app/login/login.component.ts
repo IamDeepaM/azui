@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private ds: DataService,
     private toastr: ToastrService,
-    private router: Router
+    private router: Router,
+    private appService: AppService
   ) { }
 
   ngOnInit() {}
@@ -35,14 +37,15 @@ export class LoginComponent implements OnInit {
       const reqObj = {};
       reqObj['username'] = vm.username;
       reqObj['password'] = vm.password;
-      vm.ds.postData('/auth', reqObj).subscribe(response => {
+      vm.ds.postData('/rules/login', reqObj).subscribe(response => {
         if (response && response.error) {
           vm.toastr.error(response.message);
         } else {
+          this.appService.userObj = response.data;
           vm.router.navigate(['/rule-setup']);
         }
       }, error => {
-        vm.toastr.error('Please contact admin, Serve issue');
+        vm.toastr.error(error.message);
       });
     } else {
       vm.toastr.error('Provide both username and password');
