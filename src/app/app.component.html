@@ -11,7 +11,7 @@
   </div>
   <div class="view-wrap" [ngClass]="{'nav-expand': isExpand, 'not-login': isLogin}">
     <div class="left-navigation flx-column" [ngClass]="{'nav-expand': isExpand}" *ngIf="!isLogin">
-      <div class="nav-list flx-row pointer" [ngClass]="{'active': routeName === 'rule-setup'}" (click)="navigateTo('/rule-setup')">
+      <div class="nav-list flx-row pointer" *ngIf="isAdmin" [ngClass]="{'active': routeName === 'rule-setup'}" (click)="navigateTo('/rule-setup')">
         <div class="icon-nav icon-doc"></div>
         <div class="nav-title">New Rule</div>
       </div>
