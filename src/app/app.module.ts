@@ -22,6 +22,7 @@ import { ViewRuleComponent } from './view-rule/view-rule.component';
 
 import { DataService } from './data.service';
 import { AppService } from './app.service';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { AppService } from './app.service';
   providers: [
     SanitizeHtmlPipe,
     DataService,
-    AppService
+    AppService,
+    AuthService
   ],
   entryComponents: [
     SetInfoComponent,

@@ -4,6 +4,8 @@ import { AddRuleComponent } from './add-rule/add-rule.component';
 import { RulesListComponent } from './rules-list/rules-list.component';
 import { LoginComponent } from './login/login.component';
 
+import { AuthService as AuthGuard } from './auth.service';
+
 const routes: Routes = [
   { path: '', redirectTo: '/rule-setup', pathMatch: 'full' },
   {
@@ -16,8 +18,10 @@ const routes: Routes = [
   {
     path: 'rule-setup',
     component: AddRuleComponent,
+    canActivate: [AuthGuard],
     data: {
-      name: 'rule-setup'
+      name: 'rule-setup',
+      expectedRole: 'admin'
     }
   }, {
     path: 'rules-list',
